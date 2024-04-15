@@ -1,5 +1,5 @@
 [TOC]
-# Class4. LMDeploy 量化部署 LLM & VLM实践
+# Class5. LMDeploy 量化部署 LLM & VLM实践
 
 视频链接：https://www.bilibili.com/video/BV1tr421x75B/?vd_source=39aa961652f56a2108d0e044c3c8f710
 课程文档：https://github.com/InternLM/Tutorial/blob/camp2/lmdeploy/README.md
