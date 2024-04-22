@@ -28,6 +28,16 @@
 
 # Class 6 Lagent & AgentLego 智能体应用搭建
 
+视频链接：https://www.bilibili.com/video/BV1Xt4217728/
+
+课程文档：https://github.com/InternLM/Tutorial/tree/camp2/agent
+
+课程作业：https://github.com/InternLM/Tutorial/blob/camp2/agent/homework.md
+
+Github地址：
+Lagent: https://github.com/InternLM/Lagent
+AgentLego: https://github.com/InternLM/AgentLego
+
 ## 6.1 引言
 
 **为什么要有智能体**？
