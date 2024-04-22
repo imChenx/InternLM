@@ -47,6 +47,13 @@
       - [7.3.2 制作训练数据集](#732-制作训练数据集)
       - [7.3.3 准备配置文件](#733-准备配置文件)
       - [7.3.4 FineTune](#734-finetune)
+    - [7.4 模型上传到 OpenXLab，并应用部署（**进阶作业**）](#74-模型上传到-openxlab并应用部署进阶作业)
+      - [7.4.1 在开发机中安装git，**注意**不要使用sudo](#741-在开发机中安装git注意不要使用sudo)
+      - [7.4.2 配置Git用户名](#742-配置git用户名)
+      - [7.4.3 拉取模型仓库](#743-拉取模型仓库)
+      - [7.4.4 获取 Git Access Token](#744-获取-git-access-token)
+      - [7.4.5 上传模型文件](#745-上传模型文件)
+      - [7.4.6 上传成功](#746-上传成功)
 
 
 # Class4. XTuner 微调 LLM：1.8B、多模态、Agent
@@ -1391,3 +1398,68 @@ xtuner train /root/tutorial/xtuner/llava/llava_internlm2_chat_1_8b_qlora_clip_vi
 ```
 
 ![](img/img-20240421103315.png)
+
+### 7.4 模型上传到 OpenXLab，并应用部署（**进阶作业**）
+
+#### 7.4.1 在开发机中安装git，**注意**不要使用sudo
+```bash
+Win:
+# use git install lfs
+git lfs install
+
+
+Linux:
+apt-get install git
+apt-get install git-lfs
+git lfs install
+```
+
+#### 7.4.2 配置Git用户名
+
+```bash
+git config --global user.name "imChenx"
+git config --global user.email "tjut_chenx@163.com"
+```
+
+#### 7.4.3 拉取模型仓库
+创建一个叫`internLM-chat-1.8B-lora`的模型仓库
+```bash
+git clone https://code.openxlab.org.cn/imChenx/internLM-chat-1.8B-lora.git
+```
+![](img/img-20240422105727.png)
+![](img/img-20240422105816.png)
+
+#### 7.4.4 获取 Git Access Token
+选择密钥管理
+![](img/img-20240422110140.png)
+添加令牌`openxlab-git-token`
+![](img/img-20240422110241.png)
+在后续上传模型文件，执行git push 命令时会需要填入 Username 和 Access Token 信息
+
+#### 7.4.5 上传模型文件
+
+```bash
+cd /root/internLM-chat-1.8B-lora/
+# LFS管理大文件
+git lfs track "*.bin"
+git lfs track "*.model"
+```
+标记LFS管理的文件后，提交更新的信息，执行 git push 上传模型，命令如下所示
+```bash
+cd internlm2-chat-7b
+git add -A
+git commit -m "upload model"
+git push
+```
+填入 Username 和 Access Token 信息
+```bash
+# 要求填入相关信息
+Username for 'https://code.openxlab.org.cn': 
+Password for 'https://imChenx@code.openxlab.org.cn':
+```
+![](img/img-20240422110816.png)
+
+#### 7.4.6 上传成功
+
+![](img/img-20240422111041.png)
+![](img/img-20240422111020.png)
