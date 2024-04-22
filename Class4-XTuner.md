@@ -48,7 +48,7 @@
       - [7.3.3 准备配置文件](#733-准备配置文件)
       - [7.3.4 FineTune](#734-finetune)
     - [7.4 模型上传到 OpenXLab，并应用部署（**进阶作业**）](#74-模型上传到-openxlab并应用部署进阶作业)
-      - [7.4.1 在开发机中安装git，**注意**不要使用sudo](#741-在开发机中安装git注意不要使用sudo)
+      - [7.4.1 安装配置](#741-安装配置)
       - [7.4.2 配置Git用户名](#742-配置git用户名)
       - [7.4.3 拉取模型仓库](#743-拉取模型仓库)
       - [7.4.4 获取 Git Access Token](#744-获取-git-access-token)
@@ -1401,7 +1401,8 @@ xtuner train /root/tutorial/xtuner/llava/llava_internlm2_chat_1_8b_qlora_clip_vi
 
 ### 7.4 模型上传到 OpenXLab，并应用部署（**进阶作业**）
 
-#### 7.4.1 在开发机中安装git，**注意**不要使用sudo
+#### 7.4.1 安装配置
+在开发机中安装git，**注意**不要使用sudo
 ```bash
 Win:
 # use git install lfs
