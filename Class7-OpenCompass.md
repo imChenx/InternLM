@@ -137,6 +137,7 @@ export MKL_THREADING_LAYER=GNU
 ## 7.3 将自定义数据集提交至OpenCompass官网（**进阶作业**）
 ![](img/img-20240422214454.png)
 
+[README_OPENCOMPASS.md](https://github.com/imChenx/InternLM/blob/main/README_OPENCOMPASS.md)
 ```markdown
 ---
 - name：Datasets;
